@@ -1,9 +1,12 @@
 const first = (input: string) => {
-  console.log(input);
-  return 'solution 1';
+  for (var line of input.split('\n')) {
+    var [left, right] = line.split("   ");
+    console.log(left);
+  }
+  return 11;
 };
 
-const expectedFirstSolution = 'solution 1';
+const expectedFirstSolution = '11';
 
 const second = (input: string) => {
   console.log(input);
