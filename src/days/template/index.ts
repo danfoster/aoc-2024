@@ -23,5 +23,7 @@ export default class Day1 extends Puzzle {
     }
 }
 
-const puzzle = new Day1();
-puzzle.solve();
+if (require.main === module) {
+    const puzzle = new Day1();
+    puzzle.solve();
+}
