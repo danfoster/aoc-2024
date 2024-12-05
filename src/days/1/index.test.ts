@@ -1,4 +1,3 @@
-import { expect, test } from 'vitest';
 import Puzzle from './index';
 
 test('D1 P1 Example', () => {

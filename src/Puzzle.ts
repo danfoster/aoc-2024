@@ -1,6 +1,8 @@
 import readFile from './utils/readFile';
 
 export default class Puzzle {
+    day = '0';
+
     read(filename: string): string {
         const puzzlePath = `src/days/${this.day}`;
         const input = readFile(`${puzzlePath}/${filename}`);

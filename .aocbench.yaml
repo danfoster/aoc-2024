@@ -1,0 +1,31 @@
+# .aocbench.yaml version (always 1)
+version: 1
+# Repo Author
+author: DanF
+# Language used
+language: Javascript
+# Path to Dockerfile to build image
+# dockerfile: Dockerfile
+# Or image (this takes priority)
+image: oven/bun:1-slim
+# Disable Hyperfine usage
+# hyperfine: False
+# Location where code directory should be mounted
+code: /code
+# [*] What directory to run code from
+workdir: /code/
+# [*] When running image, command to run a given day.
+# cmd: dist/day%zeroday%.dist/day%zeroday%.bin
+cmd: bun run src/days/%day%/index.ts
+# [*] When running image, command to run once to build a given day if needed.
+# runonce: ./build.sh %zeroday%
+# [*] Directories that need persisting across runs
+persistence: []
+# [*] Environment vars to set on container
+environment: []
+# [*] Path to per-day code. (Directory or File - used to check if the day exists.)
+daypath: src/days/%day%/index.ts
+# [*] Path to per-day input file.
+inputfile: daypath: src/days/%day%/input.txt
+# [*] Path to per-day answer file.
+answerfile: answers/day%zeroday%.txt

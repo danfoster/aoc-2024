@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "esnext",
     // "module": "nodenext",
     "noImplicitAny": true,
     "removeComments": true,
@@ -17,5 +18,8 @@
     "node_modules",
     "**/*.spec.ts",
     "src/scripts/**/*"
+  ],
+  "lib": [
+    "esnext",
   ]
 }
