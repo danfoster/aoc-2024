@@ -1,18 +1,14 @@
 {
-  "name": "advent-of-code-boilerplate",
+  "name": "aoc-2024",
   "version": "1.0.0",
-  "description": "Boilerplate workspace for advent of code puzzle",
-  "main": "index.ts",
+  "description": "Advent of Code 2024",
   "scripts": {
-    "dev": "bun src/index.ts",
-    "build": "rm -rf dist && tsc",
-    "test": "vitest",
-    "start": "node dist/index.js",
-    "init-day": "bun src/scripts/initNewDay/initNewDay.ts",
+    "start": "bun src/days/${DAY}/index.ts",
+    "test": "vitest src/days/${DAY}",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src"
   },
-  "author": "Francesco Maida",
+  "author": "Dan Foster",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.10.1",
