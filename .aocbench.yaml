@@ -26,6 +26,6 @@ environment: []
 # [*] Path to per-day code. (Directory or File - used to check if the day exists.)
 daypath: src/days/%day%/index.ts
 # [*] Path to per-day input file.
-inputfile: daypath: src/days/%day%/input.txt
+inputfile: src/days/%day%/input.txt
 # [*] Path to per-day answer file.
 answerfile: answers/day%zeroday%.txt
