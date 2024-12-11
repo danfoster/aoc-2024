@@ -68,6 +68,9 @@ export default class Day7 extends Puzzle {
         this.equations = [];
 
         for (let line of lines) {
+            if (line == '') {
+                continue;
+            }
             this.equations.push(new Equation(line));
         }
     }
