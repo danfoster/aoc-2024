@@ -1,4 +1,4 @@
-import readFile from './utils/readFile';
+import readFile from './utils/readFile.ts';
 
 export default class Puzzle {
     day = '0';

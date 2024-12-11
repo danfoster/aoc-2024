@@ -22,7 +22,8 @@ cmd: bun run src/days/%day%/index.ts
 # [*] Directories that need persisting across runs
 persistence: []
 # [*] Environment vars to set on container
-environment: []
+environment:
+    - NO_COLOR=1
 # [*] Path to per-day code. (Directory or File - used to check if the day exists.)
 daypath: src/days/%day%/index.ts
 # [*] Path to per-day input file.

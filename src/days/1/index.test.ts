@@ -1,4 +1,4 @@
-import Puzzle from './index';
+import Puzzle from './Puzzle.ts';
 
 test('D1 P1 Example', () => {
     const puzzle = new Puzzle();
