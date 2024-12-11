@@ -29,4 +29,4 @@ daypath: src/days/%day%/index.ts
 # [*] Path to per-day input file.
 inputfile: src/days/%day%/input.txt
 # [*] Path to per-day answer file.
-answerfile: answers/day%zeroday%.txt
+answerfile: src/days/%day%/answers.txt
