@@ -22,8 +22,3 @@ export default class Day1 extends Puzzle {
         return 'hippo';
     }
 }
-
-if (require.main === module) {
-    const puzzle = new Day1();
-    puzzle.solve();
-}
