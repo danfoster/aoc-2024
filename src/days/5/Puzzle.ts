@@ -1,4 +1,4 @@
-import Puzzle from '../../Puzzle.ts';
+import Puzzle from '../../Puzzle';
 
 class Rules {
     rules: Map<number, number[]>;

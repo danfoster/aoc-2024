@@ -96,14 +96,13 @@ export default class Day8 extends Puzzle {
                         continue;
                     }
 
-                    const dx = (b.x - a.x) * 2;
-                    const dy = (b.y - a.y) * 2;
+                    const dx = b.x - a.x;
+                    const dy = b.y - a.y;
 
                     const t = a.clone();
                     while (true) {
                         t.x += dx;
                         t.y += dy;
-                        console.log(t);
                         if (this.inBounds(t)) {
                             antinodes.add(t.clone());
                         } else {
@@ -114,8 +113,6 @@ export default class Day8 extends Puzzle {
             }
         }
 
-        // console.log(Array.from(antinodes.getAll()));
-        this.draw(antinodes);
         return antinodes.size();
     }
 }

@@ -1,17 +1,14 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    // "module": "nodenext",
+    "module": "node16",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
     "outDir": "dist",
-    "esModuleInterop": true,
-    // "moduleResolution": "bundler"
-    // "skipLibCheck": true
-    "allowImportingTsExtensions": true,
-    "noEmit": true
+    "rootDir": "src",
+    "esModuleInterop": true
   },
   "include": [
     "src/**/*.ts"
