@@ -47,16 +47,16 @@ export default class Day8 extends Puzzle {
     }
 
     draw(antinodes: PointSet) {
-        let lines: string[][] = [];
+        const lines: string[][] = [];
         for (let y = 0; y < this.height; y++) {
             lines.push(Array(this.width).fill('.'));
         }
-        for (let [c, points] of this.antennas) {
+        for (const [c, points] of this.antennas) {
             for (let p of points) {
                 lines[p.y][p.x] = c;
             }
         }
-        for (let p of antinodes.getAll()) {
+        for (const p of antinodes.getAll()) {
             lines[p.y][p.x] = '#';
         }
         console.log(lines.map((r) => r.join('')).join('\n'));
