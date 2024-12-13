@@ -10,6 +10,7 @@ export default class Day1 extends Puzzle {
     }
 
     parse(input: string) {
+        input = input.replace(/\n$/, '');
         const lines = input.split('\n');
         this.length = lines.length;
     }
