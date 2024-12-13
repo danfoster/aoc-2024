@@ -61,27 +61,28 @@ export default class Day9 extends Puzzle {
 
     drawv2() {
         const line = [];
-        for (let i = 0; i < this.disk.length; ) {
+        for (let i = 0; i < this.disk.length; i++) {
             let found = false;
             for (const db of this.datablocks) {
                 if (db.pos == i) {
                     const block = Array(db.size).fill(db.value);
                     line.push(...block);
-                    i += db.size;
+                    i += db.size - 1;
                     found = true;
+                    break;
                 }
             }
             for (const fb of this.freeblocks) {
                 if (fb.pos == i) {
                     const block = Array(fb.size).fill('.');
                     line.push(...block);
-                    i += fb.size;
+                    i += fb.size - 1;
                     found = true;
+                    break;
                 }
             }
             if (!found) {
                 line.push('?');
-                i++;
             }
         }
 
