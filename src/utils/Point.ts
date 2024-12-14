@@ -20,4 +20,8 @@ export default class Point {
     clone(): Point {
         return new Point(this.x, this.y);
     }
+
+    toString() {
+        return `[${this.x},${this.y}]`;
+    }
 }

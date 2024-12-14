@@ -16,6 +16,32 @@ export default class PointSet {
         }
     }
 
+    popFirst(): Point | undefined {
+        for (const y of this.points.values()) {
+            for (const [x, p] of y) {
+                y.delete(x);
+                return p;
+            }
+        }
+        return null;
+    }
+
+    pop(p: Point): Point | undefined {
+        if (!this.points.has(p.y)) {
+            return null;
+        }
+        if (!this.points.get(p.y).has(p.x)) {
+            return null;
+        }
+        const p2 = this.points.get(p.y).get(p.x);
+        this.points.get(p.y).delete(p.x);
+        return p2;
+    }
+
+    exists(p: Point): boolean {
+        return this.points.has(p.y) && this.points.get(p.y).has(p.x);
+    }
+
     *getAll(): IterableIterator<Point> {
         for (let y of this.points.values()) {
             for (let x of y.values()) {
