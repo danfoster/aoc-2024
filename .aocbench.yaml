@@ -25,7 +25,7 @@ persistence: []
 environment:
     - NO_COLOR=1
 # [*] Path to per-day code. (Directory or File - used to check if the day exists.)
-daypath: src/days/%day%/index.ts
+daypath: src/days/%day%/
 # [*] Path to per-day input file.
 inputfile: src/days/%day%/input.txt
 # [*] Path to per-day answer file.
