@@ -136,7 +136,7 @@ export default class Day14 extends Puzzle {
                 robot.step(this.width, this.height);
             }
             const sf = this.safetyFactor();
-            if (sf < 120000000) {
+            if (sf < 100000000) {
                 // this.draw();
                 return i + 101;
             }
